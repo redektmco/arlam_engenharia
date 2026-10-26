@@ -33,7 +33,7 @@
   document.querySelectorAll('[data-whatsapp="float"]').forEach((a) => {
     const url = linkWhats(cfg.mensagemBotaoFlutuante);
     if (url) { a.href = url; a.target = '_blank'; a.rel = 'noopener'; } else a.href = '#orcamento';
-    a.addEventListener('click', () => evento('whatsapp_click', { origem: a.classList.contains('wa-float') ? 'flutuante' : 'rodape' }));
+    a.addEventListener('click', () => evento('whatsapp_click', { origem: a.dataset.origem || 'flutuante' }));
   });
 
   // Formulário → planilha + WhatsApp
@@ -89,12 +89,14 @@
   });
 
   // Entradas das seções, uma vez
-  const els = document.querySelectorAll('[data-reveal]');
+  const els = document.querySelectorAll('[data-reveal], .shutter');
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
-      for (const e of entries) if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+      for (const e of entries) if (e.isIntersecting) { (e.target.alvo || e.target).classList.add('is-in'); io.unobserve(e.target); }
     }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
     els.forEach((el) => {
+      // um elemento todo recortado (clip-path) nunca "aparece" para o observer: observa o pai
+      if (el.classList.contains('shutter')) { el.parentElement.alvo = el; io.observe(el.parentElement); return; }
       const irmaos = [...el.parentElement.children].filter((c) => c.hasAttribute('data-reveal'));
       el.style.setProperty('--rd', `${irmaos.indexOf(el) * 80}ms`);
       io.observe(el);

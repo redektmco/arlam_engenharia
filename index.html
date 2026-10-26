@@ -8,291 +8,329 @@
 <meta property="og:title" content="Projeto estrutural em São Paulo | Arflam Engenharia">
 <meta property="og:description" content="Projeto estrutural em 2D e 3D a partir do seu projeto arquitetônico. Desde 2009.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#1f2b4d">
+<meta property="og:image" content="assets/img/fotos/hero-armacao-laje.webp">
+<meta name="theme-color" content="#1a2c50">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/fotos/hero-armacao-laje-800.webp" imagesrcset="assets/img/fotos/hero-armacao-laje-800.webp 800w, assets/img/fotos/hero-armacao-laje.webp 1600w" imagesizes="100vw">
 <link rel="stylesheet" href="assets/css/style.css">
 <script>document.documentElement.classList.add('js')</script>
 <script src="assets/js/config.js"></script>
 </head>
 <body>
 
+<header class="topbar">
+  <a class="topbar__logo" href="#topo" aria-label="Arflam Engenharia, início">
+    <img src="assets/img/logo-arflam.png" width="200" height="86" alt="Arflam">
+  </a>
+  <nav class="topbar__nav" aria-label="Seções">
+    <a href="#para-quem">Para quem é</a>
+    <a href="#entrega">O que entregamos</a>
+    <a href="#como-funciona">Como funciona</a>
+    <a href="#duvidas">Dúvidas</a>
+    <a class="topbar__phone" href="#" data-whatsapp="float" data-origem="topo" data-config="telefone">11 94731-9700</a>
+  </nav>
+  <a class="button topbar__cta" href="#orcamento">Solicitar orçamento</a>
+</header>
+
 <main>
   <!-- 1. TOPO -->
-  <header class="hero" id="topo">
-    <div class="hero__name tile tile--ink" data-load style="--d:0ms"><span>Arflam</span></div>
-
-    <nav class="hero__links" aria-label="Seções">
-      <a class="tile tile--surface" href="#para-quem">Para quem é</a>
-      <a class="tile tile--surface" href="#entrega">O que entregamos</a>
-      <a class="tile tile--surface" href="#como-funciona">Como funciona</a>
-      <a class="tile tile--surface" href="#duvidas">Dúvidas</a>
-    </nav>
-
-    <div class="hero__left">
-      <figure class="tile tile--field2 slot slot--portrait">
-        <figcaption>Foto do Luiz em obra<br><b>[PENDENTE]</b></figcaption>
-      </figure>
-      <ul class="tile tile--surface facts">
-        <li>Engenharia desde 2009</li>
-        <li>Cálculo no TQS</li>
-        <li>Projeto 2D e 3D</li>
-        <li>Dentro das normas ABNT</li>
-        <li>São Paulo, todas as zonas</li>
-      </ul>
+  <section class="hero" id="topo" aria-labelledby="hero-title">
+    <picture class="hero__photo">
+      <source srcset="assets/img/fotos/hero-armacao-laje-800.webp 800w, assets/img/fotos/hero-armacao-laje.webp 1600w" sizes="100vw">
+      <img src="assets/img/fotos/hero-armacao-laje.webp" width="1600" height="900" alt="Armação de aço de uma laje antes da concretagem" fetchpriority="high">
+    </picture>
+    <div class="hero__text">
+      <h1 id="hero-title" data-headline data-load style="--d:100ms">Projeto estrutural para a sua obra começar com segurança</h1>
+      <p class="hero__lead" data-load style="--d:260ms">Você manda o projeto arquitetônico. A Arflam calcula a estrutura e entrega o projeto em 2D e 3D, pronto para a obra e para a prefeitura.</p>
+      <a class="button button--lg" href="#orcamento" data-load style="--d:380ms">Solicitar orçamento</a>
     </div>
+  </section>
 
-    <div class="hero__centre">
-      <div class="tile tile--field2 model shutter" id="modelo">
-        <img class="model__fallback" src="assets/img/modelo-3d.webp" width="1200" height="900" alt="Modelo 3D de estrutura de sobrado: fundação, pilares, vigas e lajes" fetchpriority="high">
+  <div class="intro">
+    <p class="intro__statement" data-reveal>Você já tem o projeto arquitetônico? A Arflam calcula a estrutura da sua obra, dentro das normas e com engenheiro responsável.</p>
+    <aside class="panel panel--red intro__panel" data-load style="--d:480ms">
+      <svg class="panel__icon" viewBox="0 0 100 50" aria-hidden="true"><use href="#chevron-white"/></svg>
+      <p class="panel__title">Desde 2009<br>em São Paulo</p>
+      <p>Projeto estrutural em 2D e 3D, calculado no software TQS, para obras em todas as zonas da cidade.</p>
+      <a class="panel__link" href="#por-que">Por que a Arflam</a>
+    </aside>
+  </div>
+
+  <!-- 2. MODELO 3D -->
+  <section class="model-sec" aria-labelledby="model-title">
+    <div class="sec-head" data-reveal>
+      <svg class="chevron" viewBox="0 0 100 50" aria-hidden="true"><use href="#chevron"/></svg>
+      <h2 id="model-title">Sua estrutura em 3D</h2>
+      <p class="sec-head__sub">Veja a estrutura antes de começar a obra</p>
+    </div>
+    <div class="model-sec__grid">
+      <div class="model shutter" id="modelo">
+        <img class="model__fallback" src="assets/img/modelo-3d.webp" width="1200" height="900" alt="Modelo 3D de estrutura de sobrado: fundação, pilares, vigas e lajes" loading="lazy">
         <div class="model__controls" role="group" aria-label="Tipo de obra">
           <button type="button" class="seg is-on" data-mode="construir" aria-pressed="true">Construir</button>
           <button type="button" class="seg" data-mode="ampliar" aria-pressed="false">Ampliar</button>
         </div>
         <p class="model__note" aria-live="polite" data-note>Sobrado: fundação, pilares, vigas e lajes calculados juntos. Arraste para girar.</p>
       </div>
-      <div class="tile tile--bg statement">
-        <h1 data-headline data-load style="--d:200ms">Projeto estrutural para a sua obra começar com segurança</h1>
-        <p class="lead" data-load style="--d:360ms">Você manda o projeto arquitetônico. A Arflam calcula a estrutura e entrega o projeto em 2D e 3D, pronto para a obra e para a prefeitura.</p>
+      <div class="model-sec__text" data-reveal>
+        <p>Cada pilar, viga, laje e fundação da sua obra é calculado no TQS e conferido no modelo 3D. Assim a obra sai do papel sem improviso e com a estrutura certa para o que o arquiteto desenhou.</p>
+        <p>Vai ampliar? Antes de subir um andar, é preciso verificar se a estrutura existente aguenta a nova carga. Toque em <b>Ampliar</b> para ver.</p>
       </div>
-    </div>
-
-    <div class="hero__right">
-      <div class="tile rail rail--1">Pilares, vigas, lajes e fundação</div>
-      <div class="tile rail rail--2">Casas, sobrados e ampliações</div>
-      <div class="tile rail rail--3">Galpões e comerciais</div>
-      <div class="tile rail rail--4">Arquitetos e construtoras</div>
-      <a class="tile rail rail--cta button" href="#orcamento" data-load style="--d:480ms">Solicitar orçamento</a>
-    </div>
-  </header>
-
-  <!-- 2. PARA QUEM É -->
-  <section class="who" id="para-quem" aria-labelledby="who-title">
-    <div class="who__board">
-      <div class="tile tile--field1 who__slogan"><h2 id="who-title">Para quem é</h2></div>
-      <div class="tile tile--field2 who__word" aria-hidden="true">SP</div>
-      <div class="tile tile--surface who__plan">
-        <svg viewBox="0 0 200 200" role="img" aria-label="Planta de um projeto arquitetônico com a posição dos pilares">
-          <use href="#planta"/>
-          <g fill="var(--accent)"><rect x="18" y="18" width="10" height="10"/><rect x="95" y="18" width="10" height="10"/><rect x="172" y="18" width="10" height="10"/><rect x="18" y="95" width="10" height="10"/><rect x="95" y="95" width="10" height="10"/><rect x="172" y="95" width="10" height="10"/><rect x="18" y="172" width="10" height="10"/><rect x="95" y="172" width="10" height="10"/><rect x="172" y="172" width="10" height="10"/></g>
-        </svg>
-      </div>
-    </div>
-    <div class="who__text" data-reveal>
-      <p>Esta página é para você se:</p>
-      <ul>
-        <li><b>já tem o projeto arquitetônico</b>, pronto ou em andamento, feito pelo seu arquiteto;</li>
-        <li><b>vai construir ou ampliar</b> uma casa, um sobrado, um galpão ou um imóvel comercial em São Paulo;</li>
-        <li><b>quer a obra regularizada</b>, com projeto e responsável técnico. Obra assim é mais segura e vale mais na hora de vender.</li>
-      </ul>
     </div>
   </section>
 
-  <!-- 3. O QUE ENTREGAMOS -->
-  <section class="poster" id="entrega" aria-labelledby="entrega-title">
-    <h2 id="entrega-title" class="poster__title">O que entregamos</h2>
-    <ul class="poster__list">
-      <li data-reveal><span class="poster__item">Fôrmas</span><span class="poster__detail">Plantas de pilares, vigas e lajes em 2D</span></li>
-      <li data-reveal><span class="poster__item">Armação</span><span class="poster__detail">O aço de cada peça, detalhado</span></li>
-      <li data-reveal><span class="poster__item">Fundação</span><span class="poster__detail">Sapatas, blocos ou estacas, conforme o solo</span></li>
-      <li data-reveal><span class="poster__item">Modelo 3D</span><span class="poster__detail">A estrutura inteira, vista antes da obra</span></li>
-      <li data-reveal><span class="poster__item">Normas</span><span class="poster__detail">Cálculo pelas normas técnicas da ABNT</span></li>
+  <!-- 3. PARA QUEM É -->
+  <section class="who" id="para-quem" aria-labelledby="who-title">
+    <div class="sec-head" data-reveal>
+      <svg class="chevron" viewBox="0 0 100 50" aria-hidden="true"><use href="#chevron"/></svg>
+      <h2 id="who-title">Para quem é</h2>
+      <p class="sec-head__sub">Para quem vai construir com segurança</p>
+    </div>
+    <ul class="who__cols">
+      <li data-reveal>
+        <svg class="line-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M8 8h48v48H8zM32 8v20M32 38v18M8 32h14M30 32h26M32 28a8 8 0 0 1 8 8"/></svg>
+        <h3>Tem o arquitetônico</h3>
+        <p>Seu projeto arquitetônico está pronto ou em andamento, feito pelo seu arquiteto.</p>
+      </li>
+      <li data-reveal>
+        <svg class="line-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M10 56V30L32 12l22 18v26zM24 56V40h16v16M32 2v6M26 6h12"/></svg>
+        <h3>Vai construir ou ampliar</h3>
+        <p>Casa, sobrado, galpão, imóvel comercial ou condomínio, em qualquer zona de São Paulo.</p>
+      </li>
+      <li data-reveal>
+        <svg class="line-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M14 4h28l10 10v46H14zM42 4v10h10M22 26h22M22 34h22M22 42h12M36 50l4 4 8-9"/></svg>
+        <h3>Quer a obra regularizada</h3>
+        <p>Com projeto e responsável técnico. Obra assim é mais segura e vale mais na hora de vender.</p>
+      </li>
     </ul>
   </section>
 
-  <!-- 4. COMO FUNCIONA -->
+  <!-- 4. O QUE ENTREGAMOS -->
+  <section class="deliver" id="entrega" aria-labelledby="entrega-title">
+    <div class="deliver__photo" data-reveal>
+      <img src="assets/img/fotos/planta-projeto.webp" width="1200" height="801" alt="Projeto impresso sobre a mesa, com capacete e notebook" loading="lazy">
+    </div>
+    <div class="deliver__body">
+      <div class="sec-head" data-reveal>
+        <svg class="chevron" viewBox="0 0 100 50" aria-hidden="true"><use href="#chevron"/></svg>
+        <h2 id="entrega-title">O que entregamos</h2>
+        <p class="sec-head__sub">Tudo o que a obra precisa da estrutura</p>
+      </div>
+      <dl class="deliver__list">
+        <div data-reveal><dt>Plantas de fôrma</dt><dd>Pilares, vigas e lajes em 2D, com medidas para a obra.</dd></div>
+        <div data-reveal><dt>Detalhamento da armação</dt><dd>O aço de cada peça, detalhado para corte e montagem.</dd></div>
+        <div data-reveal><dt>Fundação</dt><dd>Sapatas, blocos ou estacas, conforme o terreno.</dd></div>
+        <div data-reveal><dt>Modelo 3D</dt><dd>A estrutura inteira, vista antes da obra.</dd></div>
+        <div data-reveal><dt>Normas técnicas</dt><dd>Cálculo conforme as normas da ABNT, com engenheiro responsável.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 5. COMO FUNCIONA -->
   <section class="steps" id="como-funciona" aria-labelledby="steps-title">
-    <h2 id="steps-title" class="steps__title">Como funciona</h2>
+    <div class="sec-head" data-reveal>
+      <svg class="chevron" viewBox="0 0 100 50" aria-hidden="true"><use href="#chevron"/></svg>
+      <h2 id="steps-title">Como funciona</h2>
+      <p class="sec-head__sub">Do arquitetônico à entrega do projeto</p>
+    </div>
     <ol class="steps__list">
-      <li class="step step--1" data-reveal>
-        <div class="tile step__tile"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#planta"/></svg></div>
+      <li class="step" data-reveal>
+        <div class="step__tile"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#planta"/></svg></div>
         <h3>Você envia o arquitetônico</h3>
         <p>Pelo WhatsApp, com as plantas do seu arquiteto.</p>
       </li>
-      <li class="step step--2" data-reveal>
-        <div class="tile step__tile"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#planta"/><g fill="var(--accent)"><rect x="18" y="18" width="10" height="10"/><rect x="95" y="18" width="10" height="10"/><rect x="172" y="18" width="10" height="10"/><rect x="18" y="95" width="10" height="10"/><rect x="95" y="95" width="10" height="10"/><rect x="172" y="95" width="10" height="10"/><rect x="18" y="172" width="10" height="10"/><rect x="95" y="172" width="10" height="10"/><rect x="172" y="172" width="10" height="10"/></g></svg></div>
+      <li class="step" data-reveal>
+        <div class="step__tile"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#planta"/><use href="#pilares"/></svg></div>
         <h3>Orçamento e lançamento</h3>
         <p>Você recebe o orçamento. Aprovado, a estrutura é posicionada sobre a planta.</p>
       </li>
-      <li class="step step--3" data-reveal>
-        <div class="tile step__tile"><img src="assets/img/modelo-3d.webp" width="1200" height="900" alt="" loading="lazy"></div>
+      <li class="step" data-reveal>
+        <div class="step__tile step__tile--img"><img src="assets/img/modelo-3d.webp" width="1200" height="900" alt="" loading="lazy"></div>
         <h3>Cálculo e modelo 3D</h3>
         <p>Cada peça é calculada no TQS e conferida no modelo 3D.</p>
       </li>
-      <li class="step step--4" data-reveal>
-        <div class="tile step__tile"><svg viewBox="0 0 280 200" aria-hidden="true"><use href="#prancha"/></svg></div>
+      <li class="step" data-reveal>
+        <div class="step__tile step__tile--navy"><svg viewBox="0 0 280 200" aria-hidden="true"><use href="#prancha"/></svg></div>
         <h3>Entrega do projeto</h3>
         <p>Plantas, detalhes e modelo 3D, prontos para a obra.</p>
       </li>
     </ol>
   </section>
 
-  <!-- 5. POR QUE A ARFLAM -->
+  <!-- 6. POR QUE A ARFLAM -->
   <section class="about" id="por-que" aria-labelledby="about-title">
-    <h2 id="about-title" data-reveal>Por que a Arflam</h2>
-    <p class="about__lead" data-reveal>Quem calcula a sua estrutura é o engenheiro Luiz Artur Lima, que atende você direto, do orçamento à entrega. A Arflam faz engenharia em São Paulo desde 2009.</p>
-    <div class="about__board">
-      <figure class="tile tile--field2 slot about__photo" data-reveal>
-        <figcaption>Foto de obra da Arflam<br><b>[PENDENTE]</b></figcaption>
-        <p class="about__note">Pontualidade, agilidade e preparo técnico: o projeto sai no combinado e dentro das normas, para a obra andar sem improviso.</p>
-      </figure>
-      <div class="about__side" data-reveal>
-        <div class="tile tile--ink about__year"><span>2009</span></div>
-        <dl class="about__facts">
-          <div><dt>No mercado</dt><dd>Desde 2009</dd></div>
-          <div><dt>Software</dt><dd>TQS, licença própria</dd></div>
-          <div><dt>Atendimento</dt><dd>Todas as zonas de SP</dd></div>
-          <div><dt>CREA</dt><dd data-config="crea">[PENDENTE]</dd></div>
-        </dl>
+    <div class="about__photo" data-reveal>
+      <img src="assets/img/fotos/armacao-pilar.webp" width="1200" height="810" alt="Armação de aço de pilares em uma obra" loading="lazy">
+      <div class="about__photo-text">
+        <h2 id="about-title">Por que a Arflam</h2>
+        <p>Quem calcula a sua estrutura é o engenheiro Luiz Artur Lima, que atende você direto, do orçamento à entrega.</p>
       </div>
     </div>
+    <div class="panel panel--red about__panel" data-reveal>
+      <svg class="panel__icon" viewBox="0 0 100 50" aria-hidden="true"><use href="#chevron-white"/></svg>
+      <p class="panel__title">Engenharia em São Paulo desde 2009</p>
+      <dl class="about__values">
+        <div><dt>Pontualidade</dt><dd>O projeto sai no combinado, para a obra não parar.</dd></div>
+        <div><dt>Agilidade</dt><dd>Resposta direta com o engenheiro, sem intermediário.</dd></div>
+        <div><dt>Preparo</dt><dd>Cálculo no TQS, com modelo 3D de cada estrutura.</dd></div>
+        <div><dt>Normas</dt><dd>Projeto dentro das normas técnicas, com responsável técnico.</dd></div>
+      </dl>
+    </div>
+    <dl class="about__facts" data-reveal>
+      <div><dt>No mercado</dt><dd>Desde 2009</dd></div>
+      <div><dt>Software</dt><dd>TQS, licença própria</dd></div>
+      <div><dt>Atendimento</dt><dd>Todas as zonas de SP</dd></div>
+      <div><dt>CREA</dt><dd data-config="crea">[PENDENTE]</dd></div>
+    </dl>
   </section>
 
-  <!-- 6. PROJETOS REALIZADOS -->
+  <!-- 7. ESTRUTURAS / PROJETOS -->
   <section class="work" id="obras" aria-labelledby="work-title">
-    <h2 id="work-title" class="work__title">Obras</h2>
+    <div class="sec-head sec-head--light" data-reveal>
+      <svg class="chevron" viewBox="0 0 100 50" aria-hidden="true"><use href="#chevron-white"/></svg>
+      <h2 id="work-title">Estruturas que projetamos</h2>
+      <p class="sec-head__sub">Residenciais, comerciais e galpões</p>
+    </div>
     <div class="work__wall">
-      <figure class="slot slot--work w-a" data-reveal><figcaption><span>Foto e descrição da obra</span><b>[PENDENTE]</b></figcaption></figure>
-      <figure class="slot slot--work w-b" data-reveal><figcaption><span>Foto e descrição da obra</span><b>[PENDENTE]</b></figcaption></figure>
-      <figure class="slot slot--work w-c" data-reveal><figcaption><span>Print do modelo 3D (TQS)</span><b>[PENDENTE]</b></figcaption></figure>
-      <figure class="slot slot--work w-d" data-reveal><figcaption><span>Foto e descrição da obra</span><b>[PENDENTE]</b></figcaption></figure>
-      <figure class="slot slot--work w-e" data-reveal><figcaption><span>Print do modelo 3D (TQS)</span><b>[PENDENTE]</b></figcaption></figure>
-      <figure class="slot slot--work w-f" data-reveal><figcaption><span>Foto e descrição da obra</span><b>[PENDENTE]</b></figcaption></figure>
+      <figure class="w-a" data-reveal><img src="assets/img/fotos/obra-formas.webp" width="1200" height="800" alt="Pilares e fôrmas de uma obra em concreto armado" loading="lazy"><figcaption>Pilares e fôrmas em concreto armado</figcaption></figure>
+      <figure class="w-b" data-reveal><img src="assets/img/fotos/obra-viga.webp" width="1200" height="900" alt="Montagem da armação de uma viga" loading="lazy"><figcaption>Armação de vigas</figcaption></figure>
+      <figure class="w-c" data-reveal><img src="assets/img/fotos/obra-estrutura.webp" width="1200" height="800" alt="Estrutura de edifício com lajes e pilares" loading="lazy"><figcaption>Edifícios e condomínios</figcaption></figure>
+      <figure class="w-d" data-reveal><img src="assets/img/fotos/obra-armacao-laje.webp" width="1200" height="800" alt="Armação de laje vista de cima" loading="lazy"><figcaption>Lajes e fundações</figcaption></figure>
+      <figure class="w-e" data-reveal><img src="assets/img/fotos/obra-lajes.webp" width="1200" height="801" alt="Estrutura de concreto de um prédio em construção" loading="lazy"><figcaption>Ampliações</figcaption></figure>
     </div>
+    <p class="work__note">Imagens ilustrativas.</p>
   </section>
 
-  <!-- 7. ARQUITETOS E CONSTRUTORAS -->
+  <!-- 8. ARQUITETOS E CONSTRUTORAS -->
   <section class="partner" id="parceiros" aria-labelledby="partner-title">
-    <div class="tile tile--field2 partner__flank" aria-hidden="true"></div>
-    <div class="tile tile--ink partner__main" data-reveal>
-      <h2 id="partner-title">Arquiteto ou construtora?</h2>
+    <div class="partner__photo"><img src="assets/img/fotos/planta-mesa.webp" width="1200" height="1145" alt="Engenheiro revisando plantas sobre a mesa" loading="lazy"></div>
+    <div class="panel panel--red partner__panel" data-reveal>
+      <svg class="panel__icon" viewBox="0 0 100 50" aria-hidden="true"><use href="#chevron-white"/></svg>
+      <h2 id="partner-title" class="panel__title">Arquiteto ou construtora?</h2>
       <p>Seu cliente precisa de um responsável pelo projeto estrutural. A Arflam calcula a estrutura a partir do seu arquitetônico, com a pontualidade que o cronograma pede. Use o mesmo formulário e conte que é parceria.</p>
-      <a class="button" href="#orcamento">Solicitar orçamento</a>
+      <a class="button button--white" href="#orcamento">Solicitar orçamento</a>
     </div>
-    <div class="tile tile--surface partner__flank" aria-hidden="true"></div>
   </section>
 
-  <!-- 8. PERGUNTAS FREQUENTES -->
+  <!-- 9. PERGUNTAS FREQUENTES -->
   <section class="faq" id="duvidas" aria-labelledby="faq-title">
-    <div class="faq__head"><h2 id="faq-title">Dúvidas</h2></div>
-    <div class="faq__band">
-      <h3>Preciso ter o projeto arquitetônico?</h3>
-      <p>Sim. O projeto estrutural é calculado a partir do arquitetônico. Se o seu ainda está em andamento, já podemos conversar e orçar.</p>
+    <div class="sec-head" data-reveal>
+      <svg class="chevron" viewBox="0 0 100 50" aria-hidden="true"><use href="#chevron"/></svg>
+      <h2 id="faq-title">Perguntas frequentes</h2>
+      <p class="sec-head__sub">Tire suas dúvidas antes de pedir o orçamento</p>
     </div>
-    <div class="faq__band">
-      <h3>Vocês atendem onde?</h3>
-      <p>Em toda a cidade de São Paulo, em todas as zonas.</p>
-    </div>
-    <div class="faq__band">
-      <h3>Qual o prazo do projeto?</h3>
-      <p>Depende do tamanho e do tipo da obra. O prazo é informado no orçamento, antes de você fechar.</p>
-    </div>
-    <div class="faq__band">
-      <h3>O projeto sai com ART?</h3>
-      <p>Sim. O projeto tem engenheiro responsável registrado no CREA e é emitida a ART, que a prefeitura e o banco pedem.</p>
-    </div>
-    <div class="faq__band">
-      <h3>Fazem projeto para ampliação?</h3>
-      <p>Sim. Antes de subir um andar, é preciso verificar se pilares e fundação existentes aguentam a nova carga. Isso entra no projeto.</p>
-    </div>
-    <div class="faq__band">
-      <h3>Atendem galpões e condomínios?</h3>
-      <p>Sim. Além de casas e sobrados, a Arflam faz projeto estrutural de galpões, imóveis comerciais e condomínios.</p>
-    </div>
+    <dl class="faq__list">
+      <div data-reveal><dt>Preciso ter o projeto arquitetônico?</dt><dd>Sim. O projeto estrutural é calculado a partir do arquitetônico. Se o seu ainda está em andamento, já podemos conversar e orçar.</dd></div>
+      <div data-reveal><dt>Vocês atendem onde?</dt><dd>Em toda a cidade de São Paulo, em todas as zonas.</dd></div>
+      <div data-reveal><dt>Qual o prazo do projeto?</dt><dd>Depende do tamanho e do tipo da obra. O prazo é informado no orçamento, antes de você fechar.</dd></div>
+      <div data-reveal><dt>O projeto sai com ART?</dt><dd>Sim. O projeto tem engenheiro responsável registrado no CREA e é emitida a ART, que a prefeitura e o banco pedem.</dd></div>
+      <div data-reveal><dt>Fazem projeto para ampliação?</dt><dd>Sim. Antes de subir um andar, é preciso verificar se pilares e fundação existentes aguentam a nova carga. Isso entra no projeto.</dd></div>
+      <div data-reveal><dt>Atendem galpões e condomínios?</dt><dd>Sim. Além de casas e sobrados, a Arflam faz projeto estrutural de galpões, imóveis comerciais e condomínios.</dd></div>
+    </dl>
   </section>
 
-  <!-- 9. FORMULÁRIO -->
+  <!-- 10. FORMULÁRIO -->
   <section class="form-sec" id="orcamento" aria-labelledby="form-title">
-    <form class="coupon" id="form-orcamento" novalidate>
-      <div class="coupon__head">
-        <h2 id="form-title">Peça seu orçamento</h2>
-        <p>Responda 6 perguntas rápidas. Ao enviar, o WhatsApp da Arflam abre com as suas respostas já escritas.</p>
-      </div>
-      <div class="coupon__fields">
-        <label class="field"><span>Nome</span>
-          <input name="nome" type="text" autocomplete="name" required>
-        </label>
-        <label class="field"><span>Telefone com WhatsApp</span>
-          <input name="telefone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(11) 90000-0000" required>
-        </label>
+    <div class="form-sec__intro" data-reveal>
+      <h2 id="form-title">Quanto custa o projeto da sua estrutura?</h2>
+      <p><b>Responda 6 perguntas rápidas e receba o orçamento pelo WhatsApp.</b></p>
+      <p>Ao enviar, o WhatsApp da Arflam abre com as suas respostas já escritas. É só tocar em enviar.</p>
+    </div>
+    <form class="form" id="form-orcamento" novalidate>
+      <p class="form__title">Peça seu orçamento</p>
+      <label class="field"><span>Nome</span>
+        <input name="nome" type="text" autocomplete="name" required>
+      </label>
+      <label class="field"><span>Telefone com WhatsApp</span>
+        <input name="telefone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(11) 90000-0000" required>
+      </label>
 
-        <fieldset class="choice"><legend>Você já tem projeto arquitetônico?</legend>
-          <label><input type="radio" name="arquitetonico" value="Sim" required><span>Sim</span></label>
-          <label><input type="radio" name="arquitetonico" value="Em andamento"><span>Em andamento</span></label>
-          <label><input type="radio" name="arquitetonico" value="Não"><span>Não</span></label>
-        </fieldset>
+      <fieldset class="choice"><legend>Você já tem projeto arquitetônico?</legend>
+        <label><input type="radio" name="arquitetonico" value="Sim" required><span>Sim</span></label>
+        <label><input type="radio" name="arquitetonico" value="Em andamento"><span>Em andamento</span></label>
+        <label><input type="radio" name="arquitetonico" value="Não"><span>Não</span></label>
+      </fieldset>
 
-        <fieldset class="choice"><legend>Quando pretende iniciar a obra?</legend>
-          <label><input type="radio" name="inicio" value="Até 3 meses" required><span>Até 3 meses</span></label>
-          <label><input type="radio" name="inicio" value="3 a 6 meses"><span>3 a 6 meses</span></label>
-          <label><input type="radio" name="inicio" value="Mais de 6 meses"><span>Mais de 6 meses</span></label>
-          <label><input type="radio" name="inicio" value="Ainda não sei"><span>Ainda não sei</span></label>
-        </fieldset>
+      <fieldset class="choice"><legend>Quando pretende iniciar a obra?</legend>
+        <label><input type="radio" name="inicio" value="Até 3 meses" required><span>Até 3 meses</span></label>
+        <label><input type="radio" name="inicio" value="3 a 6 meses"><span>3 a 6 meses</span></label>
+        <label><input type="radio" name="inicio" value="Mais de 6 meses"><span>Mais de 6 meses</span></label>
+        <label><input type="radio" name="inicio" value="Ainda não sei"><span>Ainda não sei</span></label>
+      </fieldset>
 
-        <fieldset class="choice"><legend>Qual o tipo de estrutura?</legend>
-          <label><input type="radio" name="estrutura" value="Concreto armado" required><span>Concreto armado</span></label>
-          <label><input type="radio" name="estrutura" value="Metálica"><span>Metálica</span></label>
-          <label><input type="radio" name="estrutura" value="Alvenaria estrutural"><span>Alvenaria estrutural</span></label>
-          <label><input type="radio" name="estrutura" value="Não sei"><span>Não sei</span></label>
-        </fieldset>
+      <fieldset class="choice"><legend>Qual o tipo de estrutura?</legend>
+        <label><input type="radio" name="estrutura" value="Concreto armado" required><span>Concreto armado</span></label>
+        <label><input type="radio" name="estrutura" value="Metálica"><span>Metálica</span></label>
+        <label><input type="radio" name="estrutura" value="Alvenaria estrutural"><span>Alvenaria estrutural</span></label>
+        <label><input type="radio" name="estrutura" value="Não sei"><span>Não sei</span></label>
+      </fieldset>
 
-        <fieldset class="choice"><legend>Já deu entrada na prefeitura?</legend>
-          <label><input type="radio" name="prefeitura" value="Sim, tenho protocolo" required><span>Sim, tenho protocolo</span></label>
-          <label><input type="radio" name="prefeitura" value="Ainda não"><span>Ainda não</span></label>
-          <label><input type="radio" name="prefeitura" value="Não sei"><span>Não sei</span></label>
-        </fieldset>
+      <fieldset class="choice"><legend>Já deu entrada na prefeitura?</legend>
+        <label><input type="radio" name="prefeitura" value="Sim, tenho protocolo" required><span>Sim, tenho protocolo</span></label>
+        <label><input type="radio" name="prefeitura" value="Ainda não"><span>Ainda não</span></label>
+        <label><input type="radio" name="prefeitura" value="Não sei"><span>Não sei</span></label>
+      </fieldset>
 
-        <p class="form-error" role="alert" hidden>Preencha todos os campos para continuar.</p>
-        <button class="button button--submit" type="submit">Enviar e abrir o WhatsApp</button>
-        <p class="privacy">Usamos seus dados só para responder ao seu pedido de orçamento, conforme a LGPD. Não enviamos propaganda e não compartilhamos com terceiros.</p>
-      </div>
+      <p class="form-error" role="alert" hidden>Preencha todos os campos para continuar.</p>
+      <button class="button button--lg button--submit" type="submit">Enviar e abrir o WhatsApp</button>
+      <p class="privacy">Usamos seus dados só para responder ao seu pedido de orçamento, conforme a LGPD. Não enviamos propaganda e não compartilhamos com terceiros.</p>
     </form>
   </section>
 </main>
 
-<!-- 10. RODAPÉ -->
-<footer class="footer" aria-labelledby="footer-title">
-  <h2 id="footer-title" class="sr-only">Arflam Engenharia</h2>
-  <div class="footer__mark" role="img" aria-label="Arflam">
-    <span style="--h:72%">A</span><span style="--h:100%">R</span><span style="--h:84%">F</span><span style="--h:64%">L</span><span style="--h:92%">A</span><span style="--h:78%">M</span>
-  </div>
-  <div class="footer__info">
-    <dl>
-      <div><dt>Razão social</dt><dd data-config="razaoSocial">Arflam Engenharia e Construção Ltda</dd></div>
-      <div><dt>CNPJ</dt><dd data-config="cnpj">[PENDENTE]</dd></div>
-      <div><dt>CREA</dt><dd data-config="crea">[PENDENTE]</dd></div>
-      <div><dt>Endereço</dt><dd data-config="endereco">[PENDENTE]</dd></div>
-    </dl>
-    <nav class="footer__links" aria-label="Rodapé">
-      <a href="#para-quem">Para quem é</a>
-      <a href="#entrega">O que entregamos</a>
-      <a href="#como-funciona">Como funciona</a>
-      <a href="#duvidas">Dúvidas</a>
-    </nav>
+<!-- 11. RODAPÉ -->
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <img src="assets/img/logo-arflam-completo.png" width="200" height="112" alt="Arflam Engenharia e Construção" loading="lazy">
+      <p>Projeto estrutural em 2D e 3D para obras em São Paulo, desde 2009.</p>
+    </div>
+    <div>
+      <h2 class="footer__title">Nosso escritório</h2>
+      <p class="footer__address" data-config="endereco">[PENDENTE]</p>
+    </div>
+    <div>
+      <h2 class="footer__title">Contatos</h2>
+      <p>WhatsApp <a href="#" data-whatsapp="float" data-origem="rodape" data-config="telefone">11 94731-9700</a></p>
+    </div>
+    <div>
+      <h2 class="footer__title">Empresa</h2>
+      <dl class="footer__dl">
+        <div><dt>Razão social</dt><dd data-config="razaoSocial">Arflam Engenharia e Construção Ltda</dd></div>
+        <div><dt>CNPJ</dt><dd data-config="cnpj">[PENDENTE]</dd></div>
+        <div><dt>CREA</dt><dd data-config="crea">[PENDENTE]</dd></div>
+      </dl>
+    </div>
   </div>
   <div class="footer__last">
-    <p>© <span data-year>2026</span> Arflam Engenharia</p>
-    <a class="button button--small" href="#" data-whatsapp="float">WhatsApp</a>
+    <p>© <span data-year>2026</span> Arflam Engenharia e Construção</p>
+    <p>Imagens ilustrativas: Freepik</p>
   </div>
 </footer>
 
-<a class="wa-float" href="#" data-whatsapp="float" aria-label="Falar no WhatsApp">
+<a class="wa-float" href="#" data-whatsapp="float" data-origem="flutuante" aria-label="Falar no WhatsApp">
   <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.3.6 4.5 1.8 6.4L3 29l7.2-2c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm0 23.2c-1.9 0-3.7-.5-5.3-1.4l-.4-.2-4.3 1.1 1.2-4.1-.3-.4c-1-1.6-1.5-3.5-1.5-5.5C5.4 9.8 10.2 5.2 16 5.2s10.6 4.6 10.6 10.4S21.8 26.2 16 26.2zm5.8-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.7 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
 </a>
 
 <!-- Desenhos reutilizados -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="chevron" viewBox="0 0 100 50"><path d="M0 50 50 0v18L18 50Z" fill="#d43616"/><path d="M50 0l50 50H82L50 18Z" fill="#1a2c50"/></symbol>
+  <symbol id="chevron-white" viewBox="0 0 100 50"><path d="M0 50 50 0v18L18 50Z" fill="#fff"/><path d="M50 0l50 50H82L50 18Z" fill="#fff" fill-opacity=".7"/></symbol>
   <symbol id="planta" viewBox="0 0 200 200">
-    <g fill="none" stroke="var(--ink)" stroke-width="5"><rect x="23" y="23" width="154" height="154"/><path d="M100 23v60M100 112v65M23 100h45M96 100h81"/></g>
-    <g fill="none" stroke="var(--muted)" stroke-width="2"><path d="M100 83a29 29 0 0 1 29 29M68 100a28 28 0 0 1 28-28"/><rect x="128" y="125" width="34" height="38"/></g>
+    <g fill="none" stroke="#1a2c50" stroke-width="5"><rect x="23" y="23" width="154" height="154"/><path d="M100 23v60M100 112v65M23 100h45M96 100h81"/></g>
+    <g fill="none" stroke="#727a86" stroke-width="2"><path d="M100 83a29 29 0 0 1 29 29M68 100a28 28 0 0 1 28-28"/><rect x="128" y="125" width="34" height="38"/></g>
+  </symbol>
+  <symbol id="pilares" viewBox="0 0 200 200">
+    <g fill="#d43616"><rect x="18" y="18" width="10" height="10"/><rect x="95" y="18" width="10" height="10"/><rect x="172" y="18" width="10" height="10"/><rect x="18" y="95" width="10" height="10"/><rect x="95" y="95" width="10" height="10"/><rect x="172" y="95" width="10" height="10"/><rect x="18" y="172" width="10" height="10"/><rect x="95" y="172" width="10" height="10"/><rect x="172" y="172" width="10" height="10"/></g>
   </symbol>
   <symbol id="prancha" viewBox="0 0 280 200">
-    <rect x="10" y="10" width="260" height="180" fill="var(--bg)"/>
-    <g fill="none" stroke="var(--ink)" stroke-width="3"><rect x="24" y="24" width="160" height="140"/><path d="M24 94h160M104 24v140"/></g>
-    <g fill="var(--ink)"><rect x="19" y="19" width="10" height="10"/><rect x="99" y="19" width="10" height="10"/><rect x="179" y="19" width="10" height="10"/><rect x="19" y="89" width="10" height="10"/><rect x="99" y="89" width="10" height="10"/><rect x="179" y="89" width="10" height="10"/><rect x="19" y="159" width="10" height="10"/><rect x="99" y="159" width="10" height="10"/><rect x="179" y="159" width="10" height="10"/></g>
-    <rect x="200" y="120" width="60" height="60" fill="var(--ink)"/><rect x="208" y="130" width="44" height="6" fill="var(--accent)"/><rect x="208" y="144" width="30" height="4" fill="var(--bg)"/><rect x="208" y="154" width="38" height="4" fill="var(--bg)"/><rect x="208" y="164" width="24" height="4" fill="var(--bg)"/>
+    <rect x="10" y="10" width="260" height="180" fill="#fff"/>
+    <g fill="none" stroke="#1a2c50" stroke-width="3"><rect x="24" y="24" width="160" height="140"/><path d="M24 94h160M104 24v140"/></g>
+    <g fill="#1a2c50"><rect x="19" y="19" width="10" height="10"/><rect x="99" y="19" width="10" height="10"/><rect x="179" y="19" width="10" height="10"/><rect x="19" y="89" width="10" height="10"/><rect x="99" y="89" width="10" height="10"/><rect x="179" y="89" width="10" height="10"/><rect x="19" y="159" width="10" height="10"/><rect x="99" y="159" width="10" height="10"/><rect x="179" y="159" width="10" height="10"/></g>
+    <rect x="200" y="120" width="60" height="60" fill="#1a2c50"/><rect x="208" y="130" width="44" height="6" fill="#d43616"/><rect x="208" y="144" width="30" height="4" fill="#fff"/><rect x="208" y="154" width="38" height="4" fill="#fff"/><rect x="208" y="164" width="24" height="4" fill="#fff"/>
   </symbol>
 </svg>
 

@@ -1,7 +1,7 @@
 // Modelo 3D de um sobrado (fundação, pilares, vigas e lajes), desenhado em canvas.
 // Botões: Construir / Ampliar. Arraste para girar.
 (() => {
-  const C = { pilar: '#1f2b4d', viga: '#3a4c80', laje: '#c4c9d6', sapata: '#5d6479', antigo: '#a6abb8', novo: '#f7941d' };
+  const C = { pilar: '#1a2c50', viga: '#2f4a7d', laje: '#c9ced8', sapata: '#3a4856', antigo: '#a9b0bc', novo: '#d43616' };
   const X = [0, 4, 8], Z = [0, 4, 8];
   const P = 0.3, VB = 0.2, VH = 0.45, LE = 0.12;
   const box = (x0, y0, z0, x1, y1, z1, cor, andar) => ({ a: [x0, y0, z0], b: [x1, y1, z1], cor, andar });

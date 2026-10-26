@@ -4,13 +4,14 @@
 // =====================================================================
 window.ARFLAM = {
   // WhatsApp que recebe os contatos: só números, com 55 + DDD. Ex.: "5511999998888"
-  whatsapp: "PENDENTE",
+  whatsapp: "5511947319700",
+  telefone: "11 94731-9700",
 
   // Rodapé
   razaoSocial: "Arflam Engenharia e Construção Ltda",
   cnpj: "PENDENTE",
   crea: "PENDENTE",
-  endereco: "PENDENTE",
+  endereco: "Rua Fernandes Tenório, 46, Itaquera, São Paulo, SP, CEP 08280-140",
 
   // Google Tag Manager. Ex.: "GTM-ABC1234"
   gtmId: "PENDENTE",
