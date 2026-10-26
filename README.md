@@ -15,10 +15,16 @@ Tudo fica em **um arquivo só**: `assets/js/config.js`. Troque cada `"PENDENTE"`
 
 Enquanto o WhatsApp estiver pendente, o botão de envio mostra um aviso com a mensagem que seria enviada.
 
-## Fotos pendentes
+## Identidade visual
 
-Os espaços marcados **[PENDENTE]** na página esperam material do cliente: foto do Luiz, fotos de obras e prints do modelo 3D do TQS.
-Salve as fotos em `assets/img/` em formato WebP e troque o bloco `<figure class="... slot ...">` correspondente no `index.html` por uma imagem.
+Segue o site atual (arflam.com.br): logo original, vermelho `#d43616`, azul-marinho `#1a2c50`, títulos em Oswald e textos em Montserrat.
+WhatsApp e endereço foram tirados do site atual. Confirmar com o Luiz.
+
+## Fotos (provisórias)
+
+As fotos em `assets/img/fotos/` são de banco de imagens (Freepik, licença gratuita, com crédito no rodapé). São **ilustrativas**, não são obras da Arflam.
+Quando chegarem as fotos reais (obras, foto do Luiz, prints do TQS), salve em WebP com o **mesmo nome de arquivo** em `assets/img/fotos/` e a página troca sozinha.
+Se todas as fotos de banco saírem, apague também "Imagens ilustrativas" no `index.html`.
 
 ## Eventos no Google Tag Manager
 
