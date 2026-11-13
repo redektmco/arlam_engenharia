@@ -21,6 +21,7 @@ window.ARFLAM = {
 
   // Mensagens que chegam no WhatsApp
   mensagemBotaoFlutuante: "Olá, vim pelo site e quero falar sobre projeto estrutural",
+  mensagemLaudo: "Olá, vim pelo site e quero um orçamento de laudo técnico de estrutura de concreto armado",
 
   // Teste A/B: a versão B só aparece com ?v=b no link
   headlineA: "Projeto estrutural para a sua obra começar com segurança",
